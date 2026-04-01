@@ -22,25 +22,25 @@ function App() {
     <div className="w-screen min-h-screen bg-emerald-400 flex flex-col items-center justify-between text-gray-900 font-sans">
 
       {/* HEADER */}
-      <header className="w-full h-20 bg-white border-b-4 border-emerald-600/20 flex items-center justify-between px-4 md:px-8 shadow-sm z-30">
-        <h1 className="text-xl md:text-3xl font-black text-emerald-600 tracking-wider uppercase italic">
+      <header className="w-full h-16 md:h-20 bg-white border-b-4 border-emerald-600/20 flex items-center justify-between px-3 md:px-8 shadow-sm z-30">
+        <h1 className="text-lg md:text-3xl font-black text-emerald-600 tracking-tighter md:tracking-wider uppercase italic">
           Cut the fruits
         </h1>
 
-        <div className="flex gap-2 md:gap-4">
+        <div className="flex gap-1 md:gap-4 items-center">
           {playerName && !gameOver && (
-            <div className="hidden sm:flex text-sm font-bold bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-200 items-center text-emerald-700 uppercase tracking-widest shadow-sm">
+            <div className="hidden sm:flex text-xs md:text-sm font-bold bg-emerald-50 px-3 md:px-4 py-1 md:py-2 rounded-xl border border-emerald-200 items-center text-emerald-700 uppercase tracking-widest shadow-sm">
               {playerName}
             </div>
           )}
-          <div className="text-lg md:text-xl font-bold bg-white px-4 py-2 md:px-6 md:py-2 rounded-xl border-2 border-emerald-500 flex items-center shadow-sm">
-            <span className="text-[10px] text-emerald-700 uppercase font-black tracking-widest mr-2 md:mr-3">Score</span>
-            <span className="text-emerald-600">{score}</span>
+          <div className="text-sm md:text-xl font-bold bg-white px-3 py-1.5 md:px-6 md:py-2 rounded-xl border-2 border-emerald-500 flex items-center shadow-sm">
+            <span className="text-[8px] md:text-[10px] text-emerald-700 uppercase font-black tracking-widest mr-1.5 md:mr-3 leading-none">Score</span>
+            <span className="text-emerald-600 leading-none">{score}</span>
           </div>
           {timeLeft !== null && (
-            <div className="text-lg md:text-xl font-bold bg-white px-4 py-2 md:px-6 md:py-2 rounded-xl border-2 border-rose-500 flex items-center shadow-sm">
-              <span className="text-[10px] text-rose-700 uppercase font-black tracking-widest mr-2 md:mr-3">Time</span>
-              <span className="text-rose-500">{timeLeft}s</span>
+            <div className="text-sm md:text-xl font-bold bg-white px-3 py-1.5 md:px-6 md:py-2 rounded-xl border-2 border-rose-500 flex items-center shadow-sm">
+              <span className="text-[8px] md:text-[10px] text-rose-700 uppercase font-black tracking-widest mr-1.5 md:mr-3 leading-none">Time</span>
+              <span className="text-rose-500 leading-none">{timeLeft}s</span>
             </div>
           )}
         </div>
@@ -96,14 +96,14 @@ function App() {
                 <div className="home-container p-8 md:p-12 space-y-6 max-w-lg animate-in zoom-in duration-500 shadow-2xl">
                   <h2 className="title-text text-center">Cut the fruits</h2>
                   
-                  <div className="w-full space-y-3">
-                    <label className="text-[11px] uppercase font-black text-emerald-800 tracking-widest block ml-1">Warrior Name</label>
+                  <div className="w-full flex flex-col items-center gap-3">
+                    <label className="text-[11px] uppercase font-black text-emerald-800 tracking-widest block text-center">Warrior Name</label>
                     <input 
                       type="text" 
                       value={tempName}
                       onChange={(e) => setTempName(e.target.value)}
                       placeholder="ENTER YOUR NAME..."
-                      className="input-field"
+                      className="input-field text-center mx-auto"
                     />
                   </div>
 

@@ -15,14 +15,22 @@
 }
 
 .title-text {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 900;
   text-transform: uppercase;
   font-style: italic;
   color: #10b981; /* Emerald-500 */
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.05em;
   text-shadow: 2px 2px 0px rgba(16, 185, 129, 0.1);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .input-field {
@@ -50,18 +58,26 @@
   width: 100%;
   max-width: 320px;
   padding: 1.25rem;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   background: #10b981;
   color: white;
   border: none;
   border-radius: 16px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0 8px 0px #065f46;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .start-btn {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
 }
 
 .start-btn:hover {
@@ -80,6 +96,7 @@
   cursor: not-allowed;
   transform: none;
   box-shadow: 0 4px 0px #065f46;
+  pointer-events: none;
 }
 
 .footer-note {
