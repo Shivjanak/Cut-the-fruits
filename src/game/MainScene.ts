@@ -212,7 +212,7 @@ export default class MainScene extends Phaser.Scene {
     const velocityX = (targetX - x) * (1.5 + Math.random());
     
     // Further decreased vertical push for much more relaxed gameplay
-    const velocityY = Phaser.Math.Between(-900, -1200) * Math.min(this.difficultyMultiplier, 1.3);
+    const velocityY = Phaser.Math.Between(-700, -1000) * Math.min(this.difficultyMultiplier, 1.2);
 
 
 

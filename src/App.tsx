@@ -49,9 +49,9 @@ function App() {
 
 
       {/* MAIN GAME AREA */}
-      <main className="flex-1 flex flex-col items-center justify-center p-2 md:p-4 w-full">
+      <main className="flex-1 flex flex-col items-center justify-center p-2 md:p-4 w-full h-full overflow-hidden">
         {/* Game Board Container - Responsive aspect ratio */}
-        <div className="relative w-full max-w-4xl aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.6)] border-2 md:border-4 border-orange-900/50 bg-[#2d1b14]">
+        <div className="relative w-full max-w-4xl aspect-[3/4] md:aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.6)] border-2 md:border-4 border-orange-900/50 bg-[#2d1b14] h-auto max-h-[80vh]">
 
 
           {/* PiP Video Feed (Top Left) - Smaller on mobile */}
